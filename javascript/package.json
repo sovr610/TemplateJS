@@ -1,0 +1,38 @@
+{
+  "name": "templatenode-js",
+  "version": "1.0.0",
+  "description": "a barebones template of node in javascript",
+  "main": "app.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha test\\test.js",
+    "build": "gulp && gulp publish && gulp clean"
+  },
+  "keywords": [
+    "node",
+    "js",
+    "template"
+  ],
+  "author": "Parker Bidigare",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-bundle-assets": "^2.29.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^3.1.0",
+    "gulp-uglify": "^3.0.2",
+    "mocha": "^7.2.0"
+  },
+  "dependencies": {
+    "@babel/core": "^7.10.2",
+    "compression": "^1.7.4",
+    "express": "^4.17.1",
+    "gulp-cli": "^2.2.1",
+    "helmet": "^3.22.0"
+  }
+}
