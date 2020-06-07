@@ -1,1 +1,0 @@
-var helmet=require("helmet"),compression=require("compression"),express=require("express"),port=3e3,app=express();app.use(compression),app.use(helmet),app.use(express.static(path.join(__dirname,"public"))),app.get("/",async(e,p,s)=>{}),app.listen(port,()=>console.log("Example app listening on port ${port}!",port)),module.exports=app;
