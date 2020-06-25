@@ -5,15 +5,31 @@
         "node": true
     },
     "extends": [
-        "prettier"
+        "prettier",
+        "sonarjs",
+        "plugin:jsdoc/recommended",
+        "plugin:mocha/recommended"
     ],
     "plugins":[
-        "prettier"
+        "prettier",
+        "plugin:sonarjs/recommended",
+        "markdown",
+        "jsdoc",
+        "xss",
+        "mocha"
     ],
     "parserOptions": {
         "ecmaVersion": 11
     },
     "rules": {
-        "prettier/prettier": "warning"
-    }
+        "prettier/prettier": "warning",
+        "xss/rule-name": 2
+    },
+    "overrides":[
+        {
+            // 2. Enable the Markdown processor for all .md files.
+            "files": ["**/*.md"],
+            "processor": "markdown/markdown"
+        }
+    ]
 }
