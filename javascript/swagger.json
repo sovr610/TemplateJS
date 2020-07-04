@@ -1,0 +1,15 @@
+{
+  "info": {
+    "title": "NodeJS template",
+    "version": "1.0.0",
+    "description": "the api documentation used for this nodeJS template"
+  },
+  "basePath": "/src/code",
+  "swagger": "2.0",
+  "paths": {},
+  "definitions": {},
+  "responses": {},
+  "parameters": {},
+  "securityDefinitions": {},
+  "tags": []
+}

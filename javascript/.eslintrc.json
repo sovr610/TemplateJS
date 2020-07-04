@@ -6,13 +6,13 @@
     },
     "extends": [
         "prettier",
-        "sonarjs",
+        "plugin:sonarjs/recommended",
         "plugin:jsdoc/recommended",
         "plugin:mocha/recommended"
     ],
     "plugins":[
         "prettier",
-        "plugin:sonarjs/recommended",
+        "sonarjs",
         "markdown",
         "jsdoc",
         "xss",
@@ -22,8 +22,6 @@
         "ecmaVersion": 11
     },
     "rules": {
-        "prettier/prettier": "warning",
-        "xss/rule-name": 2
     },
     "overrides":[
         {

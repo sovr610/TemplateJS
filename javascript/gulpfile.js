@@ -5,26 +5,33 @@ var gulp = require("gulp"),
   minify = require("gulp-minify"),
   babel = require("gulp-babel"),
   sourcemaps = require("gulp-sourcemaps");
+  var gulpJson = require('gulp-json');
 
 const { series } = require("gulp");
 var concat = require("gulp-concat");
 
-async function concats() {
-  return src([
-    "./src/init.js",
-    "./src/code/**/*.js"
-  ])
-    .pipe(concat("all.js"))
-    .pipe(dest("./dist/"));
-}
 
-function minifys() {
-  return src(["./dist/all.js"])
-    .pipe(sourcemaps.init())
+var paths = {
+  scripts: {
+    src: ['src/app/**/*.js'],
+    dest: 'publish'
+  },
+  json:{
+    src: 'arc/app/swagger.json',
+    dest: 'publish'
+  }
+};
+
+
+function scripts() {
+  return gulp.src(paths.scripts.src, { sourcemaps: true })
+    .pipe(babel())
     .pipe(minify())
-    .pipe(sourcemaps.write("."))
-    .pipe(dest("./dist/"));
+    .pipe(concat('main.min.js'))
+    .pipe(gulp.dest(paths.scripts.dest));
 }
 
-exports.default = series(concats, minifys);
+const build = gulp.series(scripts);
+exports.default = build;
+
 
