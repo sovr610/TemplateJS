@@ -74,6 +74,6 @@
     "pino-pretty": "^4.0.0",
     "redrun": "^8.0.1",
     "swagger-jsdoc": "^4.0.0",
-    "swagger-ui-dist": "^3.28.0"
+    "swagger-ui-dist": "^4.1.3"
   }
 }
